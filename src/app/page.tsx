@@ -16,8 +16,9 @@ export default function SalesPage() {
       {/* ===== SECTION 2: STORY HEADLINE ===== */}
       <div className={s.headlineSection}>
         <h1 className={s.mainHeadline}>
-          Retired Nutritionist Reveals How Mothers Are Losing 7kg–15kg After
-          Childbirth Without Giving Up Rice, Swallow or Their Favourite Foods
+          Retired Nigerian Midwife Reveals the Food Timing Secret Helping
+          Mothers Lose 7kg–15kg After Childbirth Without Giving Up Rice,
+          Swallow or Their Favourite Foods
         </h1>
         <p className={s.postMeta}>
           Published: 12 May 2026 &nbsp;|&nbsp; Posted by: Chioma &nbsp;|&nbsp;
@@ -120,7 +121,7 @@ export default function SalesPage() {
       <div className={s.promiseSection}>
         <p className={s.promiseText}>
           Because I am about to share with you a simple food timing method that
-          changed everything for me — and has helped over 500+ Nigerian mothers
+          changed everything for me — and has helped 247 Nigerian mothers
           flatten their postpartum belly without giving up rice, swallow, or their
           favourite foods.
         </p>
@@ -600,19 +601,8 @@ export default function SalesPage() {
         </p>
         <p>
           It is the same simple method that worked for me — and has now quietly
-          helped 500+ Nigerian mothers who were in exactly your situation.
+          helped 247 Nigerian mothers who were in exactly your situation.
         </p>
-      </div>
-
-      {/* ===== BREASTFEEDING SAFE CALLOUT ===== */}
-      <div className={s.bfCallout}>
-        <span className={s.bfIcon}>🤱</span>
-        <div>
-          <strong>Safe for breastfeeding mothers.</strong> This method does not
-          require cutting calories, skipping meals, or taking any supplements —
-          so your milk supply stays protected. It has been used safely by
-          hundreds of postpartum mothers who were still nursing.
-        </div>
       </div>
 
       {/* ===== SECTION 12: FIRST TESTIMONIALS ===== */}
@@ -620,6 +610,46 @@ export default function SalesPage() {
         title="Real Women. Real Results. Real Testimonials."
         testimonials={firstTestimonials}
       />
+
+      {/* ===== BEFORE / AFTER ===== */}
+      <div className={s.beforeAfterSection}>
+        <h2 className={s.beforeAfterTitle}>Real Transformations. Real Nigerian Mothers.</h2>
+        <p className={s.beforeAfterSub}>
+          These are real results from women who followed the 21-Day Food Timing Method.
+          No gym. No starvation. Just the guide.
+        </p>
+        <div className={s.baGrid}>
+          {beforeAfter.map((item, i) => (
+            <div key={i} className={s.baPair}>
+              <div className={s.baImgRow}>
+                <div className={s.baSlot}>
+                  {item.before ? (
+                    // Replace with: <Image src={item.before} alt={`${item.name} before`} width={160} height={200} style={{width:"100%",height:"auto",borderRadius:4}} />
+                    <div className={s.baPlaceholder}>BEFORE<br /><span>Add photo</span></div>
+                  ) : (
+                    <div className={s.baPlaceholder}>BEFORE<br /><span>Add photo</span></div>
+                  )}
+                  <span className={s.baLabel}>Before</span>
+                </div>
+                <div className={s.baArrow}>→</div>
+                <div className={s.baSlot}>
+                  {item.after ? (
+                    // Replace with: <Image src={item.after} alt={`${item.name} after`} width={160} height={200} style={{width:"100%",height:"auto",borderRadius:4}} />
+                    <div className={s.baPlaceholder}>AFTER<br /><span>Add photo</span></div>
+                  ) : (
+                    <div className={s.baPlaceholder}>AFTER<br /><span>Add photo</span></div>
+                  )}
+                  <span className={s.baLabel}>After</span>
+                </div>
+              </div>
+              <div className={s.baResult}>
+                <strong>{item.name}</strong> · {item.location}<br />
+                <span className={s.baLoss}>{item.loss}</span> · {item.weeks}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* ===== SECTION 13: PRICING ===== */}
       <div className={s.pricingSection}>
@@ -643,7 +673,7 @@ export default function SalesPage() {
         <div className={s.priceDescent}>
           I&apos;m not going to charge you <s>₦380,000</s>...<br />
           I won&apos;t even charge you <s>₦50,000</s>...<br />
-          Not even <s>₦25,000</s>...<br />
+          Not even <s>₦30,000</s>...<br />
           Not even <s>₦15,000</s>...<br />
           <br />
           A fair price for this guide would be <s>₦25,000</s>.<br />
@@ -663,6 +693,17 @@ export default function SalesPage() {
         <span className={s.scarcityText}>
           ⚠️ This Discounted Price Is ONLY For The First 50 Mothers — Hurry!
         </span>
+      </div>
+
+      {/* ===== BREASTFEEDING SAFE CALLOUT ===== */}
+      <div className={s.bfCallout}>
+        <span className={s.bfIcon}>🤱</span>
+        <div>
+          <strong>Safe for breastfeeding mothers.</strong> This method does not
+          require cutting calories, skipping meals, or taking any supplements —
+          so your milk supply stays fully protected. It has been followed safely
+          by hundreds of postpartum mothers who were still nursing.
+        </div>
       </div>
 
       {/* ===== SECTION 14: FIRST CTA ===== */}
@@ -836,8 +877,8 @@ export default function SalesPage() {
           drama. No delays.
         </p>
         <p className={s.guaranteeText}>
-          I can offer this guarantee because I am confident in this method. 500+
-          women have used it. The results speak for themselves.
+          I can offer this guarantee because I am confident in this method. 247
+          women have now used it. The results speak for themselves.
         </p>
         <p
           className={s.guaranteeText}
@@ -959,6 +1000,14 @@ export default function SalesPage() {
 
 /* ─── DATA ─────────────────────────────────────────────────────────────────── */
 
+// Add real before/after photo paths here when available
+// e.g. before: "/images/before-ngozi.jpeg", after: "/images/after-ngozi.jpeg"
+const beforeAfter = [
+  { name: "Ngozi O.",    location: "Lagos",        loss: "Lost 5.5kg",  weeks: "3 weeks",  before: null, after: null },
+  { name: "Fatimah D.", location: "Abuja",         loss: "Lost 7kg",    weeks: "4 weeks",  before: null, after: null },
+  { name: "Adaeze N.",  location: "Enugu",         loss: "Lost 10.3kg", weeks: "6 weeks",  before: null, after: null },
+];
+
 const faqItems = [
   {
     q: "Can I still eat rice, eba, and swallow while losing postpartum belly fat?",
@@ -966,7 +1015,7 @@ const faqItems = [
   },
   {
     q: "How fast will I see results?",
-    a: "Most women begin noticing reduced morning bloat by Day 4–6. Visible changes in waist size typically appear by the end of Week 2. Average results across 500+ women who have used this method are 4–7kg lost in the first 21 days.",
+    a: "Most women begin noticing reduced morning bloat by Day 4–6. Visible changes in waist size typically appear by the end of Week 2. Average results across 247 women who have used this method are 4–7kg lost in the first 21 days.",
   },
   {
     q: "Is this safe for breastfeeding mothers?",
@@ -1034,6 +1083,11 @@ const firstTestimonials = [
     initials: "YA", color: "#6a1b9a",
     name: "Yetunde Afolabi", location: "🇳🇬 Ibadan, Nigeria", time: "4 days ago",
     text: "My husband asked if I joined gym. I laughed! I no gym o. I no even exercise plenty. I just change the TIME I eat things and do that evening drink. Lost 4kg in 18 days. He's been asking what my secret is and I haven't told him yet 😄 No suffering, no starvation — and I still eat eba and egusi! Chioma God bless you.",
+  },
+  {
+    initials: "GO", color: "#795548",
+    name: "Grace Okwu", location: "🇳🇬 Warri, Nigeria", time: "2 days ago",
+    text: "I spent almost three weeks going back and forth on this page. I have been burnt too many times by Instagram products that do nothing. But the 30-day guarantee changed everything for me — I told myself, if it doesn't work I will ask for my money back and move on. Five weeks later I have lost 6.2kg and my waist is back. I am writing this specifically for whoever is reading right now and still hesitating. Just buy it. The guarantee protects you completely. And if you follow the plan, you will not need the refund.",
   },
 ];
 
@@ -1200,11 +1254,9 @@ type Testimonial = {
 function TestimonialsSet({
   title,
   testimonials,
-  showCommentForm,
 }: {
   title: string;
   testimonials: Testimonial[];
-  showCommentForm?: boolean;
 }) {
   return (
     <div className={s.testimonialsSection}>
@@ -1231,23 +1283,6 @@ function TestimonialsSet({
         <a href="#" className={`${s.pageBtn} ${s.pageBtnOff}`}>2</a>
         <a href="#" className={`${s.pageBtn} ${s.pageBtnOff}`}>3</a>
       </div>
-      {showCommentForm && (
-        <div className={s.commentForm}>
-          <h4>Share Your Experience</h4>
-          <input type="text" className={s.formField} placeholder="Your Name" />
-          <input
-            type="text"
-            className={s.formField}
-            placeholder="Your City & State"
-          />
-          <textarea
-            className={s.formField}
-            rows={4}
-            placeholder="Share your experience with the guide..."
-          />
-          <button className={s.formSubmit}>Submit Your Testimonial</button>
-        </div>
-      )}
     </div>
   );
 }

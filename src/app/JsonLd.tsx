@@ -85,7 +85,7 @@ const jsonLd = {
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "5",
-        reviewCount: "500",
+        reviewCount: "247",
         bestRating: "5",
         worstRating: "1",
       },
@@ -171,7 +171,7 @@ const jsonLd = {
           name: "How fast will I see results?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Most women begin noticing reduced morning bloat by Day 4–6. Visible changes in waist size typically appear by the end of Week 2. Average results across 500+ women who have used this method are 4–7kg lost in the first 21 days.",
+            text: "Most women begin noticing reduced morning bloat by Day 4–6. Visible changes in waist size typically appear by the end of Week 2. Average results across 247 women who have used this method are 4–7kg lost in the first 21 days.",
           },
         },
         {

@@ -11,7 +11,7 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://velucwellness.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://veluc.online";
 const OG_IMAGE = `${SITE_URL}/images/main%20image.jpeg`;
 
 export const metadata: Metadata = {

@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://velucwellness.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://veluc.online";
 
 const jsonLd = {
   "@context": "https://schema.org",

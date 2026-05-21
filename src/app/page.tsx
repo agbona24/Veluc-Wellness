@@ -670,8 +670,9 @@ export default function SalesPage() {
         <a href={CHECKOUT_URL} className={s.ctaButton}>
           ✅ Click Here To Get The 21-Day Postpartum Belly Flatten Guide NOW!
         </a>
+        <PaymentBadges />
         <p className={s.ctaSub}>
-          After payment you will be taken directly to your download page · Secure checkout · 30-Day guarantee
+          After payment you will be taken directly to your download page · 30-Day guarantee
         </p>
       </div>
 
@@ -745,8 +746,9 @@ export default function SalesPage() {
           ✅ Click Here To Get The 21-Day Postpartum Belly Flatten Guide +
           Bonuses NOW!
         </a>
+        <PaymentBadges />
         <p className={s.ctaSub}>
-          🔒 Secure payment · Your download page opens immediately after checkout · 30-Day money-back guarantee
+          Your download page opens immediately after checkout · 30-Day money-back guarantee
         </p>
       </div>
 
@@ -805,6 +807,7 @@ export default function SalesPage() {
         <a href={CHECKOUT_URL} className={s.ctaButton}>
           ⏰ Yes! Reserve My Spot Before The Price Goes Up
         </a>
+        <PaymentBadges />
       </div>
 
       <div className={s.divider} />
@@ -850,6 +853,7 @@ export default function SalesPage() {
         >
           ✅ Get Instant Access — Risk Free
         </a>
+        <PaymentBadges />
       </div>
 
       {/* ===== SECTION 19: SECOND TESTIMONIALS ===== */}
@@ -923,8 +927,9 @@ export default function SalesPage() {
           ✅ YES! I Want The 21-Day Postpartum Belly Flatten Guide + All Bonuses
           For Only ₦9,800
         </a>
+        <PaymentBadges />
         <p className={s.ctaSub}>
-          🔒 Secure Checkout · Your download page opens immediately after payment · 30-Day Money-Back Guarantee
+          🔒 Your download page opens immediately after payment · 30-Day Money-Back Guarantee
         </p>
       </div>
 
@@ -1070,6 +1075,19 @@ const waMessages = [
   { sender: "Chidinma N., Owerri",      text: "Paid o! My husband doesn't know 😄 Let me surprise him in 21 days",        time: "10:17 AM ✓✓", sent: false },
   { sender: "",                         text: "Amazing response! Thank you all so much 🙏 Your guides are being delivered to your email automatically. Check your inbox (and spam folder). Enjoy the journey! ❤️", time: "10:20 AM ✓✓", sent: true },
 ];
+
+/* ─── PAYMENT BADGES ────────────────────────────────────────────────────────── */
+
+function PaymentBadges() {
+  return (
+    <div className={s.paymentBadges}>
+      <span className={s.payBadge}>💳 Card</span>
+      <span className={s.payBadge}>🏦 Bank Transfer</span>
+      <span className={s.payBadge}>📱 USSD</span>
+      <span className={`${s.payBadge} ${s.payBadgeLock}`}>🔒 Secured by Nestuge</span>
+    </div>
+  );
+}
 
 /* ─── GUARANTEE BADGE ───────────────────────────────────────────────────────── */
 

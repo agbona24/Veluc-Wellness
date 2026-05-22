@@ -612,39 +612,20 @@ export default function SalesPage() {
       />
 
       {/* ===== BEFORE / AFTER ===== */}
-      {/* Section is hidden until real before/after photos are added.
-          To activate: set before/after paths in the beforeAfter array in DATA section below,
-          then remove the hasRealPhotos check. */}
-      {beforeAfter.some(item => item.before && item.after) && (
-        <div className={s.beforeAfterSection}>
-          <h2 className={s.beforeAfterTitle}>Real Transformations. Real Nigerian Mothers.</h2>
-          <p className={s.beforeAfterSub}>
-            These are real results from women who followed the 21-Day Food Timing Method.
-            No gym. No starvation. Just the guide.
-          </p>
-          <div className={s.baGrid}>
-            {beforeAfter.filter(item => item.before && item.after).map((item, i) => (
-              <div key={i} className={s.baPair}>
-                <div className={s.baImgRow}>
-                  <div className={s.baSlot}>
-                    <Image src={item.before!} alt={`${item.name} before`} width={160} height={200} style={{width:"100%",height:"auto",borderRadius:4}} />
-                    <span className={s.baLabel}>Before</span>
-                  </div>
-                  <div className={s.baArrow}>→</div>
-                  <div className={s.baSlot}>
-                    <Image src={item.after!} alt={`${item.name} after`} width={160} height={200} style={{width:"100%",height:"auto",borderRadius:4}} />
-                    <span className={s.baLabel}>After</span>
-                  </div>
-                </div>
-                <div className={s.baResult}>
-                  <strong>{item.name}</strong> · {item.location}<br />
-                  <span className={s.baLoss}>{item.loss}</span> · {item.weeks}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      <div className={s.beforeAfterSection}>
+        <h2 className={s.beforeAfterTitle}>Real Transformations. Real Nigerian Mothers.</h2>
+        <p className={s.beforeAfterSub}>
+          These are real results from women who followed the 21-Day Food Timing Method.
+          No gym. No starvation. Just the guide.
+        </p>
+        <Image
+          src="/images/before-after%20image%201.jpeg"
+          alt="Nigerian mother before and after following the 21-Day Postpartum Belly Flatten Guide"
+          width={752}
+          height={500}
+          style={{ width: "100%", height: "auto", borderRadius: 8 }}
+        />
+      </div>
 
       {/* ===== SECTION 13: PRICING ===== */}
       <div className={s.pricingSection}>
@@ -993,13 +974,6 @@ export default function SalesPage() {
 
 /* ─── DATA ─────────────────────────────────────────────────────────────────── */
 
-// Add real before/after photo paths here when available
-// e.g. before: "/images/before-ngozi.jpeg", after: "/images/after-ngozi.jpeg"
-const beforeAfter = [
-  { name: "Ngozi O.",    location: "Lagos",        loss: "Lost 5.5kg",  weeks: "3 weeks",  before: null, after: null },
-  { name: "Fatimah D.", location: "Abuja",         loss: "Lost 7kg",    weeks: "4 weeks",  before: null, after: null },
-  { name: "Adaeze N.",  location: "Enugu",         loss: "Lost 10.3kg", weeks: "6 weeks",  before: null, after: null },
-];
 
 const faqItems = [
   {

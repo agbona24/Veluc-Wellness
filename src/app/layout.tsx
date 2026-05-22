@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Veluc Wellness Blog",
   },
   description:
-    "Retired Nutritionist reveals how Nigerian mothers are losing 7kg–15kg after childbirth without giving up rice, swallow or their favourite foods. Proven food-timing method. Only ₦9,800 / $8. 30-day money-back guarantee.",
+    "Retired Nigerian midwife reveals the food timing secret helping mothers lose 7kg–15kg after childbirth without giving up rice, swallow or their favourite foods. No gym. No starvation. Only ₦9,800 / $8. 30-day money-back guarantee.",
 
   keywords: [
     "postpartum weight loss Nigeria",
@@ -32,11 +32,15 @@ export const metadata: Metadata = {
     "postpartum belly flatten",
     "weight loss after baby Nigeria",
     "how to slim down eating Nigerian food",
-    "food timing weight loss",
-    "belly fat after pregnancy",
+    "food timing weight loss Nigeria",
+    "belly fat after pregnancy Nigeria",
     "Nigerian food weight loss",
     "lose weight eating rice Nigeria",
     "busy mum weight loss Nigeria",
+    "postpartum weight loss without gym",
+    "how to lose belly fat after delivery Nigeria",
+    "21 day belly flatten guide",
+    "nighttime belly reset drink",
     "Veluc Wellness Blog",
   ],
 
@@ -53,7 +57,7 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: SITE_URL,
     siteName: "Veluc Wellness Blog",
-    title: "Retired Nutritionist Reveals How Nigerian Mothers Are Losing 7kg–15kg After Childbirth Without Giving Up Rice or Swallow",
+    title: "Retired Nigerian Midwife Reveals the Food Timing Secret Helping Mothers Lose 7kg–15kg After Childbirth Without Giving Up Rice or Swallow",
     description:
       "Simple food-timing method helps busy Nigerian mothers flatten postpartum belly without dieting, gym, or giving up their favourite foods. ₦9,800 / $8 — 30-day guarantee.",
     images: [
@@ -70,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nigerian Mothers Are Losing 7kg–15kg After Childbirth Without Giving Up Rice — Here's How",
     description:
-      "A retired nutritionist's food-timing method that lets you eat rice, swallow and eba while still losing postpartum belly fat. ₦9,800 / $8.",
+      "A retired Nigerian midwife's food-timing method that lets you eat rice, swallow and eba while still losing postpartum belly fat. ₦9,800 / $8.",
     images: [OG_IMAGE],
     creator: "@velucwellness",
   },

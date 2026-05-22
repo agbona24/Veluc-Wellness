@@ -10,22 +10,26 @@ const jsonLd = {
       name: "Veluc Wellness Blog",
       url: SITE_URL,
       description: "Real wellness tips and digital health guides for African women.",
-      sameAs: [],
+      sameAs: [`${SITE_URL}`],
     },
 
-    /* ── WebPage ── */
+    /* ── BlogPosting (AI engines treat this as citable content) ── */
     {
-      "@type": "WebPage",
-      "@id": `${SITE_URL}/#webpage`,
+      "@type": "BlogPosting",
+      "@id": `${SITE_URL}/#blogpost`,
       url: SITE_URL,
-      name: "The 21-Day Postpartum Belly Flatten Guide | Veluc Wellness Blog",
+      headline: "Retired Nigerian Midwife Reveals the Food Timing Secret Helping Mothers Lose 7kg–15kg After Childbirth Without Giving Up Rice, Swallow or Their Favourite Foods",
       description:
-        "Retired Nutritionist reveals how Nigerian mothers are losing 7kg–15kg after childbirth without giving up rice, swallow or their favourite foods.",
+        "Retired Nigerian midwife reveals the food timing secret helping mothers lose 7kg–15kg after childbirth without giving up rice, swallow or their favourite foods. No gym. No starvation.",
+      image: `${SITE_URL}/images/main%20image.jpeg`,
       inLanguage: "en-NG",
-      isPartOf: { "@id": `${SITE_URL}/#organization` },
-      datePublished: "2026-05-12",
-      dateModified: "2026-05-20",
       author: { "@id": `${SITE_URL}/#author` },
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      datePublished: "2026-05-12",
+      dateModified: "2026-05-22",
+      mainEntityOfPage: `${SITE_URL}`,
+      articleSection: "Women's Health, Postpartum Wellness, Weight Loss",
+      keywords: "postpartum weight loss, Nigerian mothers, food timing, belly fat after childbirth, lose weight eating Nigerian food",
       speakable: {
         "@type": "SpeakableSpecification",
         cssSelector: ["h1", ".promise", ".guarantee"],
@@ -38,7 +42,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#author`,
       name: "Chioma",
       description:
-        "Nigerian wellness blogger, mother of two based in Lagos. Shares practical health tips for African women based on personal experience.",
+        "Nigerian wellness blogger and mother of two based in Lagos. Shares practical postpartum health tips for African women based on personal experience with the food timing method learned from retired midwife Mama Rose.",
       url: SITE_URL,
       knowsAbout: [
         "postpartum weight loss",
@@ -46,6 +50,8 @@ const jsonLd = {
         "women's health",
         "food timing for weight loss",
         "postpartum belly fat",
+        "postpartum hormones",
+        "breastfeeding and weight loss",
       ],
     },
 
@@ -55,7 +61,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#product`,
       name: "The 21-Day Postpartum Belly Flatten Guide",
       description:
-        "A step-by-step food timing guide that helps Nigerian mothers lose 7kg–15kg of postpartum belly fat in 21 days — without giving up rice, swallow, or their favourite Nigerian foods. Includes a nighttime belly reset drink, 21-day Nigerian meal plan, and postpartum hormone reset method.",
+        "A step-by-step food timing guide that helps Nigerian mothers lose 7kg–15kg of postpartum belly fat in 21 days — without giving up rice, swallow, or their favourite Nigerian foods. Created by Chioma based on a method taught by Mama Rose, a retired Nigerian midwife with 35 years of experience. Includes the nighttime belly reset drink, 21-day Nigerian meal plan, and postpartum hormone reset method.",
       image: `${SITE_URL}/images/The%2021-Day%20Postpartum%20Belly%20Confidence%20Reset.jpeg`,
       brand: { "@id": `${SITE_URL}/#organization` },
       author: { "@id": `${SITE_URL}/#author` },
@@ -63,7 +69,7 @@ const jsonLd = {
       category: "Health & Wellness / Digital Guide",
       audience: {
         "@type": "Audience",
-        audienceType: "Nigerian mothers, postpartum women, African women seeking weight loss",
+        audienceType: "Nigerian mothers, postpartum women, African women seeking weight loss after childbirth",
       },
       offers: {
         "@type": "Offer",
@@ -203,7 +209,7 @@ const jsonLd = {
           name: "What if the guide does not work for me?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The guide comes with a 30-day money-back guarantee. If you follow the method for 30 days and see no difference in your weight or how your clothes fit, you will receive a full refund with no questions asked.",
+            text: "The guide comes with a 30-day money-back guarantee. If you follow the method for 30 days and see no difference in your weight or how your clothes fit, email hello@veluc.online and you will receive a full refund with no questions asked.",
           },
         },
         {
@@ -219,7 +225,7 @@ const jsonLd = {
           name: "How much does the guide cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The 21-Day Postpartum Belly Flatten Guide is currently available at a discounted price of ₦9,800 (approximately $8 USD) for the first 50 buyers. This is a one-time payment with instant digital access and includes all bonus guides.",
+            text: "The 21-Day Postpartum Belly Flatten Guide is available at a discounted price of ₦9,800 (approximately $8 USD). This is a one-time payment with instant digital access and includes all bonus guides and a 30-day money-back guarantee.",
           },
         },
       ],

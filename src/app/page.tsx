@@ -969,10 +969,10 @@ export default function SalesPage() {
           product is a digital download — no physical item will be shipped.
         </p>
         <div className={s.footerLinks}>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Refund Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/refund-policy">Refund Policy</a>
         </div>
       </footer>
     </div>

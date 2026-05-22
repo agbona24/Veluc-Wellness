@@ -623,6 +623,13 @@ export default function SalesPage() {
           alt="Nigerian mother before and after following the 21-Day Postpartum Belly Flatten Guide"
           width={752}
           height={500}
+          style={{ width: "100%", height: "auto", borderRadius: 8, marginBottom: 16 }}
+        />
+        <Image
+          src="/images/before-after%20image%202.jpeg"
+          alt="Nigerian mother transformation after the 21-Day Postpartum Belly Flatten Guide"
+          width={752}
+          height={500}
           style={{ width: "100%", height: "auto", borderRadius: 8 }}
         />
       </div>

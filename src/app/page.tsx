@@ -510,7 +510,7 @@ export default function SalesPage() {
       {/* ===== SECTION 9: PRODUCT REVEAL ===== */}
       <div className={s.productReveal}>
         <p style={{ fontSize: 15, color: "#800020", marginBottom: 6, fontWeight: 600 }}>
-          Introducing...
+          So I put everything into one guide.
         </p>
         <span className={s.productName}>
           The 21-Day Postpartum Belly Flatten Guide
@@ -612,44 +612,39 @@ export default function SalesPage() {
       />
 
       {/* ===== BEFORE / AFTER ===== */}
-      <div className={s.beforeAfterSection}>
-        <h2 className={s.beforeAfterTitle}>Real Transformations. Real Nigerian Mothers.</h2>
-        <p className={s.beforeAfterSub}>
-          These are real results from women who followed the 21-Day Food Timing Method.
-          No gym. No starvation. Just the guide.
-        </p>
-        <div className={s.baGrid}>
-          {beforeAfter.map((item, i) => (
-            <div key={i} className={s.baPair}>
-              <div className={s.baImgRow}>
-                <div className={s.baSlot}>
-                  {item.before ? (
-                    // Replace with: <Image src={item.before} alt={`${item.name} before`} width={160} height={200} style={{width:"100%",height:"auto",borderRadius:4}} />
-                    <div className={s.baPlaceholder}>BEFORE<br /><span>Add photo</span></div>
-                  ) : (
-                    <div className={s.baPlaceholder}>BEFORE<br /><span>Add photo</span></div>
-                  )}
-                  <span className={s.baLabel}>Before</span>
+      {/* Section is hidden until real before/after photos are added.
+          To activate: set before/after paths in the beforeAfter array in DATA section below,
+          then remove the hasRealPhotos check. */}
+      {beforeAfter.some(item => item.before && item.after) && (
+        <div className={s.beforeAfterSection}>
+          <h2 className={s.beforeAfterTitle}>Real Transformations. Real Nigerian Mothers.</h2>
+          <p className={s.beforeAfterSub}>
+            These are real results from women who followed the 21-Day Food Timing Method.
+            No gym. No starvation. Just the guide.
+          </p>
+          <div className={s.baGrid}>
+            {beforeAfter.filter(item => item.before && item.after).map((item, i) => (
+              <div key={i} className={s.baPair}>
+                <div className={s.baImgRow}>
+                  <div className={s.baSlot}>
+                    <Image src={item.before!} alt={`${item.name} before`} width={160} height={200} style={{width:"100%",height:"auto",borderRadius:4}} />
+                    <span className={s.baLabel}>Before</span>
+                  </div>
+                  <div className={s.baArrow}>→</div>
+                  <div className={s.baSlot}>
+                    <Image src={item.after!} alt={`${item.name} after`} width={160} height={200} style={{width:"100%",height:"auto",borderRadius:4}} />
+                    <span className={s.baLabel}>After</span>
+                  </div>
                 </div>
-                <div className={s.baArrow}>→</div>
-                <div className={s.baSlot}>
-                  {item.after ? (
-                    // Replace with: <Image src={item.after} alt={`${item.name} after`} width={160} height={200} style={{width:"100%",height:"auto",borderRadius:4}} />
-                    <div className={s.baPlaceholder}>AFTER<br /><span>Add photo</span></div>
-                  ) : (
-                    <div className={s.baPlaceholder}>AFTER<br /><span>Add photo</span></div>
-                  )}
-                  <span className={s.baLabel}>After</span>
+                <div className={s.baResult}>
+                  <strong>{item.name}</strong> · {item.location}<br />
+                  <span className={s.baLoss}>{item.loss}</span> · {item.weeks}
                 </div>
               </div>
-              <div className={s.baResult}>
-                <strong>{item.name}</strong> · {item.location}<br />
-                <span className={s.baLoss}>{item.loss}</span> · {item.weeks}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* ===== SECTION 13: PRICING ===== */}
       <div className={s.pricingSection}>
@@ -709,7 +704,7 @@ export default function SalesPage() {
       {/* ===== SECTION 14: FIRST CTA ===== */}
       <div className={s.ctaWrapper}>
         <a href={CHECKOUT_URL} className={s.ctaButton}>
-          ✅ Click Here To Get The 21-Day Postpartum Belly Flatten Guide NOW!
+          ✅ I&apos;m Ready — Start My 21-Day Journey Now
         </a>
         <PaymentBadges />
         <p className={s.ctaSub}>
@@ -725,7 +720,7 @@ export default function SalesPage() {
         <p className={s.bonusSubheader}>
           Order today and receive the <strong>complete bonus pack</strong> — 11
           extra guides, trackers &amp; planners bundled with your main guide.{" "}
-          <strong>First 50 mothers only.</strong>
+          <strong>Only available at this discounted price while slots last.</strong>
         </p>
 
         {/* STACKED HERO MOCKUP — 3d_image.jpeg */}
@@ -784,8 +779,7 @@ export default function SalesPage() {
       {/* ===== SECTION 16: SECOND CTA ===== */}
       <div className={s.ctaWrapper}>
         <a href={CHECKOUT_URL} className={s.ctaButton}>
-          ✅ Click Here To Get The 21-Day Postpartum Belly Flatten Guide +
-          Bonuses NOW!
+          ✅ Get The Guide + All Bonuses — ₦9,800 Only
         </a>
         <PaymentBadges />
         <p className={s.ctaSub}>
@@ -802,7 +796,7 @@ export default function SalesPage() {
           <div className={s.waHead}>
             <div className={s.waAv}>EB</div>
             <div>
-              <span className={s.waGname}>Ebook Buyers 📚</span>
+              <span className={s.waGname}>Veluc Wellness Community 🌿</span>
               <span className={s.waGmem}>847 members · 23 online</span>
             </div>
           </div>
@@ -965,8 +959,7 @@ export default function SalesPage() {
           className={s.ctaButton}
           style={{ fontSize: 19, padding: "24px 16px" }}
         >
-          ✅ YES! I Want The 21-Day Postpartum Belly Flatten Guide + All Bonuses
-          For Only ₦9,800
+          ✅ Yes — Show Me My Flat Belly. I&apos;m Getting The Guide Now.
         </a>
         <PaymentBadges />
         <p className={s.ctaSub}>

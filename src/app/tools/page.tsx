@@ -81,10 +81,6 @@ export default function Dashboard() {
   const [showPaywall, setShowPaywall] = useState(false);
   const [showLastChance, setShowLastChance] = useState(false);
   const [showSocialNudge, setShowSocialNudge] = useState(false);
-  const [showVerifyForm, setShowVerifyForm] = useState(false);
-  const [verifyEmail, setVerifyEmail] = useState("");
-  const [verifyError, setVerifyError] = useState("");
-  const [verifyLoading, setVerifyLoading] = useState(false);
   const [paywallSeconds, setPaywallSeconds] = useState(15 * 60);
   const [name, setName] = useState("");
   const [guideDone, setGuideDone] = useState(0);
@@ -175,23 +171,6 @@ export default function Dashboard() {
     paywallTimer.current = setTimeout(() => setShowPaywall(true), 3500);
   }
 
-  function handleVerifySubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(verifyEmail.trim())) {
-      setVerifyError("Please enter the email address you used on Selar.");
-      return;
-    }
-    setVerifyError("");
-    setVerifyLoading(true);
-    setTimeout(() => {
-      localStorage.setItem("veluc_buyer", "1");
-      setIsBuyer(true);
-      setShowPaywall(false);
-      setShowLastChance(false);
-      setVerifyLoading(false);
-    }, 1800);
-  }
 
   const greeting = getGreeting();
   const displayName = name || "there";
@@ -256,31 +235,6 @@ export default function Dashboard() {
               <span>✓ 30-day guarantee</span>
               <span>✓ Any phone</span>
             </div>
-            {!showVerifyForm ? (
-              <button className={s.paywallAlready} onClick={() => setShowVerifyForm(true)}>
-                Already purchased? Click here
-              </button>
-            ) : (
-              <form className={s.verifyForm} onSubmit={handleVerifySubmit}>
-                <p className={s.verifyLabel}>Enter the email you used on Selar to verify your purchase:</p>
-                <input
-                  type="email"
-                  className={s.verifyInput}
-                  placeholder="your@email.com"
-                  value={verifyEmail}
-                  onChange={(e) => { setVerifyEmail(e.target.value); setVerifyError(""); }}
-                  disabled={verifyLoading}
-                  autoFocus
-                />
-                {verifyError && <p className={s.verifyError}>{verifyError}</p>}
-                <button type="submit" className={s.verifyBtn} disabled={verifyLoading}>
-                  {verifyLoading ? "Verifying…" : "Verify & Get Access"}
-                </button>
-                <button type="button" className={s.paywallAlready} onClick={() => setShowVerifyForm(false)}>
-                  Cancel
-                </button>
-              </form>
-            )}
           </div>
         </div>
       )}

@@ -10,12 +10,11 @@ declare global {
 
 export default function PurchaseEvent() {
   useEffect(() => {
-    localStorage.setItem("veluc_buyer", "1");
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "Purchase", {
-        value: 9800,
+        value: 12000,
         currency: "NGN",
-        content_name: "21-Day Postpartum Belly Flatten Guide",
+        content_name: "Intimacy Reset",
         content_type: "product",
       });
     }

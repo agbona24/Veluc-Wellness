@@ -3,6 +3,22 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://veluc.online";
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    /* ── WebSite ── */
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Veluc Wellness Blog",
+      description: "Real wellness tips and digital health guides for African women.",
+      inLanguage: "en-NG",
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/?q={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    },
+
     /* ── Organization ── */
     {
       "@type": "Organization",
@@ -26,14 +42,20 @@ const jsonLd = {
       author: { "@id": `${SITE_URL}/#author` },
       publisher: { "@id": `${SITE_URL}/#organization` },
       datePublished: "2026-05-12",
-      dateModified: "2026-05-22",
+      dateModified: "2026-05-26",
       mainEntityOfPage: `${SITE_URL}`,
       articleSection: "Women's Health, Postpartum Wellness, Weight Loss",
       keywords: "postpartum weight loss, Nigerian mothers, food timing, belly fat after childbirth, lose weight eating Nigerian food",
       speakable: {
         "@type": "SpeakableSpecification",
-        cssSelector: ["h1", ".promise", ".guarantee"],
+        cssSelector: ["h1", "h2"],
       },
+      mentions: [
+        { "@type": "Thing", name: "Food Window", description: "Specific times of day when the postpartum body naturally burns fat, identified by Mama Rose." },
+        { "@type": "Thing", name: "Nighttime Belly Reset Drink", description: "A two-ingredient warm drink made from common Nigerian market ingredients, taken before bed to regulate blood sugar and reduce morning belly bloat." },
+        { "@type": "Thing", name: "Postpartum cortisol", description: "Elevated cortisol after childbirth causes the body to store belly fat; starvation diets worsen this by raising cortisol further." },
+        { "@type": "Person", name: "Mama Rose", description: "A 63-year-old retired Nigerian midwife from Onitsha who delivered over 2,000 babies in 35 years and taught Chioma the food timing method." },
+      ],
     },
 
     /* ── Author / Person ── */
@@ -131,6 +153,14 @@ const jsonLd = {
         "A proven 21-day food timing method for Nigerian mothers to lose 7–15kg of postpartum belly fat without dieting, gym, or giving up rice, swallow, or eba.",
       totalTime: "P21D",
       estimatedCost: { "@type": "MonetaryAmount", currency: "NGN", value: "9800" },
+      supply: [
+        { "@type": "HowToSupply", name: "Common Nigerian pantry ingredients (ginger, lemon — for nighttime drink)" },
+        { "@type": "HowToSupply", name: "Normal Nigerian household foods: rice, eba, ofe onugbu, egusi, fried plantain" },
+      ],
+      tool: [
+        { "@type": "HowToTool", name: "The 21-Day Postpartum Belly Flatten Guide (digital download)" },
+        { "@type": "HowToTool", name: "A kitchen scale or measuring cup (optional)" },
+      ],
       step: [
         {
           "@type": "HowToStep",

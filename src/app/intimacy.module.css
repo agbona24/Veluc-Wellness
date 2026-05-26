@@ -1,0 +1,473 @@
+/* ===== LAYOUT ===== */
+.pageWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.contentBlock {
+  padding: 20px 24px;
+}
+
+.contentBlock p {
+  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333333;
+}
+
+/* ===== BLOG HEADER ===== */
+.blogHeader {
+  background-color: #4A0D2B;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.blogName {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  color: #F7C5D8;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.blogTagline {
+  display: block;
+  font-size: 14px;
+  color: #F7C5D8;
+  font-style: italic;
+}
+
+/* ===== HEADLINE ===== */
+.headlineSection {
+  padding: 32px 24px 20px;
+  border-bottom: 1px solid #f0e0e8;
+}
+
+.mainHeadline {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a0010;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.postMeta {
+  font-size: 13px;
+  color: #888888;
+  font-style: italic;
+}
+
+/* ===== ITALIC THOUGHT ===== */
+.italicThought {
+  font-style: italic;
+  color: #7D1C4A;
+  display: block;
+  margin: -6px 0 12px 0;
+}
+
+/* ===== PULL QUOTE ===== */
+.pullQuote {
+  border-left: 4px solid #C8849A;
+  margin: 28px 0;
+  padding: 16px 20px;
+  background: #FBF5F8;
+  border-radius: 0 8px 8px 0;
+}
+
+.pullQuote p {
+  margin: 0 !important;
+  font-size: 17px !important;
+  font-style: italic;
+  color: #4A0D2B !important;
+  font-weight: 500;
+}
+
+/* ===== SECTION HEADING ===== */
+.sectionHeading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4A0D2B;
+  margin: 8px 0 16px 0;
+  line-height: 1.35;
+}
+
+/* ===== HORMONE BOX ===== */
+.hormoneBox {
+  background: #FBF5F8;
+  border: 1px solid #e8c8d8;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+
+.hormoneBox p {
+  margin-bottom: 10px !important;
+  font-size: 15px !important;
+}
+
+.hormoneBox p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.hormoneRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.hormoneEmoji {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.hormoneText {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.hormoneText strong {
+  color: #4A0D2B;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonialCard {
+  background: #FBF5F8;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin: 16px 0;
+  border-left: 4px solid #C8849A;
+}
+
+.testimonialText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 10px !important;
+}
+
+.testimonialName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #7D1C4A;
+  font-style: normal;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: #f0e0e8;
+  margin: 8px 24px;
+}
+
+/* ===== PRODUCT REVEAL ===== */
+.productReveal {
+  background: linear-gradient(135deg, #4A0D2B 0%, #7D1C4A 100%);
+  padding: 36px 24px;
+  text-align: center;
+}
+
+.productEyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #F7C5D8;
+  margin-bottom: 10px;
+}
+
+.productTitle {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.productSubtitle {
+  font-size: 16px;
+  color: #F7C5D8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== DELIVERABLES ===== */
+.deliverableCard {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid #f0e0e8;
+}
+
+.deliverableCard:last-child {
+  border-bottom: none;
+}
+
+.deliverableEmoji {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.deliverableInfo {
+  flex: 1;
+}
+
+.deliverableTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a0010;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.deliverableSub {
+  font-size: 13px;
+  color: #888;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.deliverableDesc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.deliverableValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: #C8849A;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* ===== WHO IT'S FOR ===== */
+.forList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.forList li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0e0e8;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.forList li:last-child {
+  border-bottom: none;
+}
+
+.forList li::before {
+  content: "✓";
+  color: #C8849A;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ===== PRICING BOX ===== */
+.pricingBox {
+  background: #FBF5F8;
+  border: 2px solid #C8849A;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pricingOldPrice {
+  font-size: 18px;
+  color: #999;
+  text-decoration: line-through;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.pricingPrice {
+  font-size: 46px;
+  font-weight: 800;
+  color: #4A0D2B;
+  display: block;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.pricingNote {
+  font-size: 13px;
+  color: #888;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.ctaBtn {
+  display: block;
+  background: linear-gradient(135deg, #7D1C4A, #C8849A);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 18px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.3px;
+  transition: opacity 0.15s;
+}
+
+.ctaBtn:hover {
+  opacity: 0.9;
+}
+
+.ctaBtnSub {
+  display: block;
+  font-size: 12px;
+  color: #F7C5D8;
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+/* ===== GUARANTEE ===== */
+.guarantee {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff8f0;
+  border: 1px solid #e8d8c8;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+
+.guaranteeIcon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.guaranteeText {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.guaranteeText strong {
+  color: #1a0010;
+}
+
+/* ===== FAQ ===== */
+.faqItem {
+  padding: 16px 0;
+  border-bottom: 1px solid #f0e0e8;
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+}
+
+.faqQ {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a0010;
+  margin-bottom: 6px;
+}
+
+.faqA {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== CHIOMA SIGN ===== */
+.chiomaSign {
+  background: #FBF5F8;
+  padding: 28px 24px;
+  text-align: center;
+  border-top: 1px solid #f0e0e8;
+}
+
+.chiomaSignText {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.chiomaSignName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4A0D2B;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #1a0010;
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #a090a0;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: #C8849A;
+  text-decoration: none;
+}
+
+/* ===== STICKY CTA BAR ===== */
+.stickyBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #4A0D2B;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 100;
+  box-shadow: 0 -4px 20px rgba(74,13,43,0.25);
+}
+
+.stickyBarText {
+  font-size: 14px;
+  color: #F7C5D8;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.stickyBarBtn {
+  background: linear-gradient(135deg, #C8849A, #e8a4be);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ===== BOTTOM SPACER (for sticky bar) ===== */
+.bottomSpacer {
+  height: 72px;
+}

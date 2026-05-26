@@ -90,6 +90,19 @@ export const metadata: Metadata = {
     },
   },
 
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
+
+  other: {
+    "theme-color": "#0F4C5C",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "format-detection": "telephone=no",
+  },
+
   category: "health",
 };
 

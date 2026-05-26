@@ -1,11 +1,18 @@
 import Image from "next/image";
 import s from "./sales.module.css";
+import StickyBar from "./StickyBar";
+import CountdownTimer from "./CountdownTimer";
+import ExitIntent from "./ExitIntent";
+import Lightbox from "./Lightbox";
 
-const CHECKOUT_URL = "#CHECKOUT_URL"; // ← Replace with your Selar/Nestuge/Paystack link
+const CHECKOUT_URL = "https://selar.com/442894izk7";
 
 export default function SalesPage() {
   return (
     <div className={s.pageWrapper}>
+      <StickyBar />
+      <ExitIntent />
+      <Lightbox />
 
       {/* ===== SECTION 1: BLOG HEADER ===== */}
       <header className={s.blogHeader}>
@@ -33,7 +40,8 @@ export default function SalesPage() {
           alt="Chioma — Veluc Wellness Blog"
           width={800}
           height={500}
-          style={{ width: "100%", height: "auto", borderRadius: 4 }}
+          style={{ width: "100%", height: "auto", borderRadius: 4, cursor: "zoom-in" }}
+          data-lightbox
           priority
         />
       </div>
@@ -509,7 +517,7 @@ export default function SalesPage() {
 
       {/* ===== SECTION 9: PRODUCT REVEAL ===== */}
       <div className={s.productReveal}>
-        <p style={{ fontSize: 15, color: "#800020", marginBottom: 6, fontWeight: 600 }}>
+        <p style={{ fontSize: 15, color: "#0F4C5C", marginBottom: 6, fontWeight: 600 }}>
           So I put everything into one guide.
         </p>
         <span className={s.productName}>
@@ -528,8 +536,57 @@ export default function SalesPage() {
           alt="The 21-Day Postpartum Belly Flatten Guide"
           width={600}
           height={400}
-          style={{ width: "100%", height: "auto", borderRadius: 6 }}
+          style={{ width: "100%", height: "auto", borderRadius: 6, cursor: "zoom-in" }}
+          data-lightbox
         />
+      </div>
+
+      {/* ===== COMPARISON TABLE ===== */}
+      <ComparisonTable />
+
+      {/* ===== PLATFORM SCREENSHOT ===== */}
+      <div className={s.platformSection}>
+        <p className={s.platformEyebrow}>🔒 Exclusive bonus — buyers only</p>
+        <h2 className={s.platformHeading}>
+          Get the guide today and this bonus is yours — free with your purchase.
+        </h2>
+        <p className={s.platformSub}>
+          This interactive bonus is <strong>not available to the public</strong>.
+          It is built exclusively for women who purchase the 21-Day Guide —
+          your personal dashboard, daily tracker, journal, habits, and more,
+          live on your phone the moment you pay.
+        </p>
+        <div className={s.platformScreenshots}>
+          <div className={s.platformImgWrap} data-lightbox>
+            <Image
+              src="/images/platform-screenshot1.png"
+              alt="Veluc Wellness dashboard — Day view"
+              width={400}
+              height={700}
+              className={s.platformImg}
+            />
+          </div>
+          <div className={s.platformImgWrap} data-lightbox>
+            <Image
+              src="/images/platform-screenshot2.png"
+              alt="Veluc Wellness dashboard — Tools view"
+              width={400}
+              height={700}
+              className={s.platformImg}
+            />
+          </div>
+        </div>
+        <div className={s.platformFeatures}>
+          <div className={s.platformFeature}><span>📗</span><span>21-Day Daily Guide</span></div>
+          <div className={s.platformFeature}><span>📊</span><span>Progress Tracker</span></div>
+          <div className={s.platformFeature}><span>✅</span><span>Daily Habits</span></div>
+          <div className={s.platformFeature}><span>✏️</span><span>Confidence Journal</span></div>
+          <div className={s.platformFeature}><span>🥗</span><span>Nutrition Guide</span></div>
+          <div className={s.platformFeature}><span>🍲</span><span>Food Swap Guide</span></div>
+        </div>
+        <p className={s.platformNote}>
+          Works on any phone · No app download needed · Access forever
+        </p>
       </div>
 
       {/* ===== SECTION 11: WHAT IS INSIDE ===== */}
@@ -618,20 +675,30 @@ export default function SalesPage() {
           These are real results from women who followed the 21-Day Food Timing Method.
           No gym. No starvation. Just the guide.
         </p>
-        <Image
-          src="/images/before-after%20image%201.jpeg"
-          alt="Nigerian mother before and after following the 21-Day Postpartum Belly Flatten Guide"
-          width={752}
-          height={500}
-          style={{ width: "100%", height: "auto", borderRadius: 8, marginBottom: 16 }}
-        />
-        <Image
-          src="/images/before-after%20image%202.jpeg"
-          alt="Nigerian mother transformation after the 21-Day Postpartum Belly Flatten Guide"
-          width={752}
-          height={500}
-          style={{ width: "100%", height: "auto", borderRadius: 8 }}
-        />
+        <figure style={{ margin: 0, marginBottom: 24 }}>
+          <Image
+            src="/images/before-after%20image%201.jpeg"
+            alt="Nigerian mother before and after following the 21-Day Postpartum Belly Flatten Guide"
+            width={752}
+            height={500}
+            style={{ width: "100%", height: "auto", borderRadius: 8 }}
+          />
+          <figcaption style={{ textAlign: "center", fontSize: 13, color: "#555555", marginTop: 8 }}>
+            Uche, Aba — Lost 6kg in 4 weeks following the food timing method. No gym, no starvation.
+          </figcaption>
+        </figure>
+        <figure style={{ margin: 0 }}>
+          <Image
+            src="/images/before-after%20image%202.jpeg"
+            alt="Nigerian mother transformation after the 21-Day Postpartum Belly Flatten Guide"
+            width={752}
+            height={500}
+            style={{ width: "100%", height: "auto", borderRadius: 8 }}
+          />
+          <figcaption style={{ textAlign: "center", fontSize: 13, color: "#555555", marginTop: 8 }}>
+            Adaeze, Enugu — 10.3kg lost in 6 weeks. Third child. &quot;I feel like myself again.&quot;
+          </figcaption>
+        </figure>
       </div>
 
       {/* ===== SECTION 13: PRICING ===== */}
@@ -669,13 +736,14 @@ export default function SalesPage() {
             One-time payment. Instant digital access.
           </p>
           <GuaranteeBadge size={110} />
-          <p style={{ fontSize: 13, color: "#800020", marginTop: 10, marginBottom: 0, fontWeight: 600 }}>
+          <p style={{ fontSize: 13, color: "#0F4C5C", marginTop: 10, marginBottom: 0, fontWeight: 600 }}>
             Protected by our 30-Day Money-Back Guarantee
           </p>
         </div>
         <span className={s.scarcityText}>
           ⚠️ This Discounted Price Is ONLY For The First 50 Mothers — Hurry!
         </span>
+        <CountdownTimer />
       </div>
 
       {/* ===== BREASTFEEDING SAFE CALLOUT ===== */}
@@ -698,6 +766,13 @@ export default function SalesPage() {
         <p className={s.ctaSub}>
           After payment you will be taken directly to your download page · 30-Day guarantee
         </p>
+        <div className={s.previewCta}>
+          <span className={s.previewCtaDivider}>or</span>
+          <a href="/tools" className={s.previewCtaBtn}>
+            👀 Preview your free bonus — takes 60 seconds
+          </a>
+          <p className={s.previewCtaSub}>See exactly what you&apos;re getting before you pay</p>
+        </div>
       </div>
 
       <div className={s.divider} />
@@ -854,9 +929,9 @@ export default function SalesPage() {
         </p>
         <p className={s.guaranteeText}>
           If after 30 days you haven&apos;t seen any difference — no change in
-          weight, no change in how your clothes fit, nothing at all — send me a
-          message and I will refund every single naira. No questions asked. No
-          drama. No delays.
+          weight, no change in how your clothes fit, nothing at all — you are
+          fully covered. You will receive a complete refund. No questions asked.
+          No drama. No delays.
         </p>
         <p className={s.guaranteeText}>
           I can offer this guarantee because I am confident in this method. 247
@@ -864,7 +939,7 @@ export default function SalesPage() {
         </p>
         <p
           className={s.guaranteeText}
-          style={{ fontWeight: 700, color: "#800020" }}
+          style={{ fontWeight: 700, color: "#0F4C5C" }}
         >
           You either get results — or you get your money back. It&apos;s that
           simple.
@@ -1005,7 +1080,7 @@ const faqItems = [
   },
   {
     q: "What if the guide does not work for me?",
-    a: "The guide comes with a 30-day money-back guarantee. If you follow the method for 30 days and see no difference in your weight or how your clothes fit, you will receive a full refund with no questions asked.",
+    a: "The guide comes with a 30-day money-back guarantee. If you follow the method for 30 days and see no difference in your weight or how your clothes fit, you are fully covered — a complete refund, no questions asked. Full details are on our Refund Policy page.",
   },
   {
     q: "How is this different from other Nigerian weight loss programs?",
@@ -1013,7 +1088,7 @@ const faqItems = [
   },
   {
     q: "How much does the guide cost?",
-    a: "The 21-Day Postpartum Belly Flatten Guide is currently available at a discounted price of ₦9,800 (approximately $8 USD) for the first 50 buyers. This is a one-time payment with instant digital access and includes all bonus guides.",
+    a: "The 21-Day Postpartum Belly Flatten Guide is currently available at a discounted launch price of ₦9,800 (approximately $8 USD). This is a one-time payment with instant digital access and includes all 11 bonus guides. The price will return to ₦25,000 once the discounted slots are gone.",
   },
 ];
 
@@ -1094,14 +1169,14 @@ const secondTestimonials = [
 ];
 
 const waMessages = [
-  { sender: "Ngozi C., Lagos",         text: "Just paid! Can't wait to start 🙌",                                          time: "10:02 AM ✓✓", sent: false },
-  { sender: "Blessing A., Port Harcourt", text: "Payment done. Bank transfer sent ✅",                                     time: "10:04 AM ✓✓", sent: false },
-  { sender: "Fatima Y., Abuja",         text: "Completed! My sister sent me this link — we're doing it together 😊",       time: "10:07 AM ✓✓", sent: false },
-  { sender: "Amaka O., Enugu",          text: "Done! Card payment confirmed 🎉",                                           time: "10:09 AM ✓✓", sent: false },
-  { sender: "Kemi F., Ibadan",          text: "Just paid! My third child is 10 months and I'm ready 💪",                  time: "10:12 AM ✓✓", sent: false },
-  { sender: "Sandra E., Warri",         text: "USSD transfer done. Waiting for my copy!",                                  time: "10:14 AM ✓✓", sent: false },
-  { sender: "Chidinma N., Owerri",      text: "Paid o! My husband doesn't know 😄 Let me surprise him in 21 days",        time: "10:17 AM ✓✓", sent: false },
-  { sender: "",                         text: "Amazing response! Thank you all so much 🙏 Your guides are being delivered to your email automatically. Check your inbox (and spam folder). Enjoy the journey! ❤️", time: "10:20 AM ✓✓", sent: true },
+  { sender: "Kemi F., Ibadan",          text: "Just paid! My third child is 10 months and I'm ready 💪",                  time: "Mon 8:43 AM ✓✓",  sent: false },
+  { sender: "Blessing A., Port Harcourt", text: "Payment done. Bank transfer sent ✅",                                   time: "Mon 11:17 AM ✓✓", sent: false },
+  { sender: "Amaka O., Enugu",          text: "Done! Card payment confirmed 🎉",                                         time: "Mon 2:06 PM ✓✓",  sent: false },
+  { sender: "Fatima Y., Abuja",         text: "Completed! My sister sent me this link — we're doing it together 😊",     time: "Tue 9:34 AM ✓✓",  sent: false },
+  { sender: "Ngozi C., Lagos",          text: "Just paid! Can't wait to start 🙌",                                       time: "Tue 12:51 PM ✓✓", sent: false },
+  { sender: "Sandra E., Warri",         text: "USSD transfer done. Waiting for my copy!",                                time: "Tue 4:18 PM ✓✓",  sent: false },
+  { sender: "Chidinma N., Owerri",      text: "Paid o! My husband doesn't know 😄 Let me surprise him in 21 days",      time: "Wed 7:29 AM ✓✓",  sent: false },
+  { sender: "",                         text: "Amazing response! Thank you all so much 🙏 Your guides are being delivered to your email automatically. Check your inbox (and spam folder). Enjoy the journey! ❤️", time: "Wed 7:44 AM ✓✓", sent: true },
 ];
 
 /* ─── PAYMENT BADGES ────────────────────────────────────────────────────────── */
@@ -1112,7 +1187,7 @@ function PaymentBadges() {
       <span className={s.payBadge}>💳 Card</span>
       <span className={s.payBadge}>🏦 Bank Transfer</span>
       <span className={s.payBadge}>📱 USSD</span>
-      <span className={`${s.payBadge} ${s.payBadgeLock}`}>🔒 Secured by Nestuge</span>
+      <span className={`${s.payBadge} ${s.payBadgeLock}`}>🔒 Secured by Selar</span>
     </div>
   );
 }
@@ -1133,13 +1208,13 @@ function GuaranteeBadge({ size = 160 }: { size?: number }) {
       aria-label="30-Day Money-Back Guarantee"
     >
       {/* Outer filled circle */}
-      <circle cx={cx} cy={cy} r="96" fill="#800020" />
+      <circle cx={cx} cy={cy} r="96" fill="#0F4C5C" />
 
       {/* Gold dashed outer ring */}
       <circle cx={cx} cy={cy} r="93" fill="none" stroke="#FFCC00" strokeWidth="2" strokeDasharray="5 3.5" />
 
       {/* Gold solid inner ring */}
-      <circle cx={cx} cy={cy} r="84" fill="#6b001a" stroke="#FFCC00" strokeWidth="1.5" />
+      <circle cx={cx} cy={cy} r="84" fill="#0A3A47" stroke="#FFCC00" strokeWidth="1.5" />
 
       {/* ★ MONEY-BACK ★ — top row */}
       <text
@@ -1211,6 +1286,48 @@ function GuaranteeBadge({ size = 160 }: { size?: number }) {
         100% RISK FREE
       </text>
     </svg>
+  );
+}
+
+/* ─── COMPARISON TABLE ──────────────────────────────────────────────────────── */
+
+function ComparisonTable() {
+  const cols = ["Nigerian\nFood ✓", "Breastfeed\nSafe", "Results\nin 21 Days", "Affordable", "Sustainable"];
+
+  const rows: { label: string; vals: ("yes"|"no"|"maybe")[]; highlight?: boolean }[] = [
+    { label: "💊 Diet pills / supplements", vals: ["no",    "no",    "maybe", "no",    "no"  ] },
+    { label: "🍵 Flat tummy / herbal tea",   vals: ["no",    "no",    "maybe", "maybe", "no"  ] },
+    { label: "🏋️ Gym membership",            vals: ["no",    "maybe", "maybe", "no",    "maybe"] },
+    { label: "🚫 No rice / no swallow diet", vals: ["no",    "no",    "maybe", "yes",   "no"  ] },
+    { label: "⭐ This Guide",                vals: ["yes",   "yes",   "yes",   "yes",   "yes" ], highlight: true },
+  ];
+
+  const icon = (v: "yes"|"no"|"maybe") =>
+    v === "yes"   ? <span className={s.compYes}>✅</span> :
+    v === "no"    ? <span className={s.compNo}>❌</span>  :
+                    <span className={s.compMaybe}>SOME</span>;
+
+  return (
+    <div className={s.compSection}>
+      <h2 className={s.compTitle}>Why Everything Else Failed You</h2>
+      <p className={s.compSubtitle}>An honest comparison — this guide vs. what you have already tried</p>
+      <table className={s.compTable}>
+        <thead>
+          <tr>
+            <th>Method</th>
+            {cols.map((c) => <th key={c}>{c}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.label} className={row.highlight ? s.compRowHighlight : ""}>
+              <td>{row.label}</td>
+              {row.vals.map((v, i) => <td key={i}>{icon(v)}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

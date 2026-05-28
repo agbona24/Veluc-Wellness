@@ -57,7 +57,7 @@ export default function ExitIntent() {
           yet — and closing this page won&apos;t change that.
         </p>
         <p className={s.exitBody}>
-          <strong>247 Nigerian mothers</strong> almost left this page too.
+          <strong>143 Nigerian mothers</strong> almost left this page too.
           The ones who stayed? They are now fitting into clothes they haven&apos;t
           worn in over a year.
         </p>

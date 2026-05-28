@@ -1624,3 +1624,110 @@
   .compTable th, .compTable td { padding: 9px 5px; }
   .stickyBarTitle { display: none; }
 }
+
+/* ── 96-Hour Result Callout ── */
+.resultCallout {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: linear-gradient(135deg, #EBF3F5 0%, #D4EBF0 100%);
+  border: 2px solid #0F4C5C;
+  border-radius: 16px;
+  padding: 22px 20px;
+  margin: 0 auto 28px;
+  max-width: 752px;
+}
+
+.resultCalloutEmoji {
+  font-size: 32px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.resultCalloutTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0F4C5C;
+  margin: 0 0 6px;
+}
+
+.resultCalloutBody {
+  font-size: 14px;
+  color: #1F2933;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── You Don't Need To section ── */
+.noNeedSection {
+  max-width: 752px;
+  margin: 0 auto 32px;
+  padding: 28px 24px;
+  background: #FFF8F0;
+  border-radius: 16px;
+  border-left: 4px solid #FFCC00;
+}
+
+.noNeedHeading {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1F2933;
+  margin: 0 0 16px;
+}
+
+.noNeedList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.noNeedList li {
+  font-size: 14px;
+  color: #1F2933;
+  line-height: 1.5;
+  padding-left: 4px;
+}
+
+/* ── Reason Why + Milestone bar ── */
+.reasonWhy {
+  background: #EBF3F5;
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-size: 14px;
+  color: #1F2933;
+  line-height: 1.6;
+  margin: 0 auto 18px;
+  max-width: 560px;
+  text-align: center;
+}
+
+.milestoneWrap {
+  max-width: 440px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.milestoneBar {
+  width: 100%;
+  height: 14px;
+  background: #DDE8EC;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.milestoneBarFill {
+  height: 100%;
+  width: 71.5%;
+  background: linear-gradient(90deg, #0F4C5C, #6BAA75);
+  border-radius: 99px;
+}
+
+.milestoneCount {
+  font-size: 13px;
+  color: #0F4C5C;
+  margin: 0;
+}

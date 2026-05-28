@@ -270,7 +270,7 @@ export default function Dashboard() {
           {streak > 0 && <span className={s.streakBadge} style={{ marginBottom: 12 }}>🔥 {streak}-day streak</span>}
           <div className={s.communityPill}>
             <span>👭</span>
-            <span>247+ Nigerian mothers on this journey with you</span>
+            <span>143+ Nigerian mothers on this journey with you</span>
           </div>
         </div>
 

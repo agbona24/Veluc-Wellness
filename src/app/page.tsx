@@ -129,7 +129,7 @@ export default function SalesPage() {
       <div className={s.promiseSection}>
         <p className={s.promiseText}>
           Because I am about to share with you a simple food timing method that
-          changed everything for me — and has helped 247 Nigerian mothers
+          changed everything for me — and has helped 143 Nigerian mothers
           flatten their postpartum belly without giving up rice, swallow, or their
           favourite foods.
         </p>
@@ -541,6 +541,19 @@ export default function SalesPage() {
         />
       </div>
 
+      {/* ===== 96 HOURS CALLOUT ===== */}
+      <div className={s.resultCallout}>
+        <span className={s.resultCalloutEmoji}>⚡</span>
+        <div>
+          <p className={s.resultCalloutTitle}>First results within 96 hours</p>
+          <p className={s.resultCalloutBody}>
+            Most women notice their morning belly bloat visibly reduced by Day 4.
+            Not 4 weeks. Not 4 months. <strong>4 days.</strong> Because this method
+            works with your hormones — not against them.
+          </p>
+        </div>
+      </div>
+
       {/* ===== COMPARISON TABLE ===== */}
       <ComparisonTable />
 
@@ -587,6 +600,22 @@ export default function SalesPage() {
         <p className={s.platformNote}>
           Works on any phone · No app download needed · Access forever
         </p>
+      </div>
+
+      {/* ===== YOU DON'T NEED TO ===== */}
+      <div className={s.noNeedSection}>
+        <h2 className={s.noNeedHeading}>And you don&apos;t need to do any of this:</h2>
+        <ul className={s.noNeedList}>
+          <li>❌ No gym, no equipment, no sweaty hour-long sessions</li>
+          <li>❌ No counting calories or tracking macros</li>
+          <li>❌ No cutting rice, swallow, eba, or any Nigerian food</li>
+          <li>❌ No expensive supplements, herbs, or flat tummy teas</li>
+          <li>❌ No meal prep or cooking separate meals for yourself</li>
+          <li>❌ No telling your family or husband you&apos;re on a diet</li>
+          <li>❌ No skipping parties, owambe, or family events</li>
+          <li>❌ No early morning routines — do this at your own pace</li>
+          <li>❌ No starvation — your milk supply stays fully protected</li>
+        </ul>
       </div>
 
       {/* ===== SECTION 11: WHAT IS INSIDE ===== */}
@@ -658,7 +687,7 @@ export default function SalesPage() {
         </p>
         <p>
           It is the same simple method that worked for me — and has now quietly
-          helped 247 Nigerian mothers who were in exactly your situation.
+          helped 143 Nigerian mothers who were in exactly your situation.
         </p>
       </div>
 
@@ -726,8 +755,15 @@ export default function SalesPage() {
           Not even <s>₦30,000</s>...<br />
           Not even <s>₦15,000</s>...<br />
           <br />
-          A fair price for this guide would be <s>₦25,000</s>.<br />
-          But I want it accessible to <em>every</em> Nigerian mother who needs it.
+          A fair price for everything here would be <s>₦25,000</s>.<br />
+          But here is why it is ₦9,800 right now — and why it will not stay that way.
+        </div>
+        <div className={s.reasonWhy}>
+          I am keeping this price at ₦9,800 until I have collected <strong>200 verified success stories.</strong> Once I reach 200, the price goes to ₦25,000 — permanently. I want the first 200 women to be able to say they got it at the launch price. <strong>We are currently at 143.</strong> That is 57 women away from the price going up.
+        </div>
+        <div className={s.milestoneWrap}>
+          <div className={s.milestoneBar}><div className={s.milestoneBarFill} /></div>
+          <p className={s.milestoneCount}><strong>143 of 200</strong> success stories — <strong>57 spots left at ₦9,800</strong></p>
         </div>
         <div className={s.currentPriceBlock}>
           <span className={s.origPriceStrike}>₦25,000</span>
@@ -740,9 +776,6 @@ export default function SalesPage() {
             Protected by our 30-Day Money-Back Guarantee
           </p>
         </div>
-        <span className={s.scarcityText}>
-          ⚠️ This Discounted Price Is ONLY For The First 50 Mothers — Hurry!
-        </span>
         <CountdownTimer />
       </div>
 
@@ -833,7 +866,7 @@ export default function SalesPage() {
         {/* TOTAL BAR */}
         <div className={s.bonusTotalBar}>
           <p className={s.bonusTotalLabel}>Combined retail value of everything:</p>
-          <span className={s.bonusTotalValue}>₦73,500</span>
+          <span className={s.bonusTotalValue}>₦147,000</span>
           <p className={s.bonusTodayLabel}>You pay today only:</p>
           <span className={s.bonusTodayPrice}>₦9,800 / $8</span>
         </div>
@@ -914,35 +947,38 @@ export default function SalesPage() {
       <div className={s.guaranteeSection}>
         <GuaranteeBadge size={180} />
         <h2 className={s.guaranteeTitle}>
-          My Bold 30-Day Money-Back Guarantee
+          Lose At Least 2kg In 21 Days — Or Your Money Back
         </h2>
         <p className={s.guaranteeText}>
-          Still feeling unsure? I completely understand. Which is why I&apos;m
-          making you a bold, risk-free promise:
+          I am not going to give you a vague &quot;satisfaction guarantee.&quot;
+          I am going to put a number on it — because I am that confident in this method.
         </p>
         <p className={s.guaranteeText}>
           <strong>
-            Try The 21-Day Postpartum Belly Flatten Guide for 30 full days. Follow
-            the food timing method. Drink the nighttime reset drink. Use the meal
-            plan.
+            Follow the food timing method for 21 days. Drink the nighttime belly
+            reset drink. Use the meal plan exactly as written.
           </strong>
         </p>
         <p className={s.guaranteeText}>
-          If after 30 days you haven&apos;t seen any difference — no change in
-          weight, no change in how your clothes fit, nothing at all — you are
-          fully covered. You will receive a complete refund. No questions asked.
-          No drama. No delays.
+          If you do not lose at least <strong>2kg</strong> and see a visible
+          difference in your belly by Day 21 — email me and I will refund every
+          single naira. No questions. No delays. No drama.
         </p>
         <p className={s.guaranteeText}>
-          I can offer this guarantee because I am confident in this method. 247
-          women have now used it. The results speak for themselves.
+          And you keep <strong>everything.</strong> The guide, the interactive
+          platform, all 11 bonuses — they are yours no matter what. I carry the
+          full risk. You carry none.
+        </p>
+        <p className={s.guaranteeText}>
+          I can make this promise because 143 women have now followed this exact
+          method. The results are consistent enough that I am comfortable putting
+          a number on it.
         </p>
         <p
           className={s.guaranteeText}
           style={{ fontWeight: 700, color: "#0F4C5C" }}
         >
-          You either get results — or you get your money back. It&apos;s that
-          simple.
+          Lose at least 2kg in 21 days — or your money back. You keep everything either way.
         </p>
         <a
           href={CHECKOUT_URL}
@@ -982,13 +1018,23 @@ export default function SalesPage() {
             Option 1 — You Take Action Today
           </span>
           <p>
-            You grab The 21-Day Postpartum Belly Flatten Guide at ₦9,800. You
-            follow the simple food timing method. You drink the nighttime belly
-            reset drink. You follow the 21-day meal plan — still eating rice, still
-            eating swallow, still living your real life. Within 3 weeks, you start
-            seeing the version of yourself you thought was gone. Your clothes fit
-            again. Your confidence returns. The people around you notice. You feel
-            at home in your own body again.
+            It is Day 22. You wake up, walk to the mirror, and pull up your
+            blouse — and you stop. Not in dread. In disbelief. Your belly is
+            visibly flatter. The puffiness that greeted you every morning for
+            months is gone. You reach into your wardrobe and pull out a dress you
+            haven&apos;t worn in over a year. It goes on. You smooth it over your
+            waist and look at yourself. You look like <em>you</em> again.
+          </p>
+          <p>
+            That afternoon, your husband walks into the room. He stops. He looks
+            at you — that look, the one you thought was gone — is back on his
+            face. You didn&apos;t tell him you were doing anything. You just
+            followed the method. You still ate rice. You still went to that family
+            event. You still lived your life. And this is where it brought you.
+          </p>
+          <p>
+            All of this for ₦9,800. Less than a plate of food at a Lagos
+            restaurant.
           </p>
         </div>
 
@@ -1005,7 +1051,7 @@ export default function SalesPage() {
         </div>
 
         <span className={s.urgencyText}>
-          The clock is ticking. Only 7 spots remain at ₦9,800.
+          57 spots remain at ₦9,800. At 200 success stories, the price goes to ₦25,000 permanently.
         </span>
         <p style={{ textAlign: "center", fontSize: 16, color: "#333333", marginBottom: 0 }}>
           <em>
@@ -1064,7 +1110,7 @@ const faqItems = [
   },
   {
     q: "How fast will I see results?",
-    a: "Most women begin noticing reduced morning bloat by Day 4–6. Visible changes in waist size typically appear by the end of Week 2. Average results across 247 women who have used this method are 4–7kg lost in the first 21 days.",
+    a: "Most women begin noticing reduced morning bloat by Day 4–6. Visible changes in waist size typically appear by the end of Week 2. Average results across 143 women who have used this method are 4–7kg lost in the first 21 days.",
   },
   {
     q: "Is this safe for breastfeeding mothers?",
@@ -1094,6 +1140,7 @@ const faqItems = [
 
 const bonusPack: { emoji: string; title: string; value: string; img: string | null }[] = [
   { emoji: "📗", title: "21-Day Postpartum Belly Flatten Guide",  value: "₦25,000", img: "/images/The%2021-Day%20Postpartum%20Belly%20Confidence%20Reset.jpeg" },
+  { emoji: "📱", title: "Interactive Wellness Platform — 16 personal tools, live on your phone", value: "₦73,500", img: "/images/platform-screenshot1.png" },
   { emoji: "🥗", title: "Postpartum Nutrition Reset Guide",       value: "₦7,000",  img: "/images/Postpartum%20Nutrition%20Reset%20Guide.jpeg"                 },
   { emoji: "🏃", title: "Busy Mum Workout & Movement Guide",      value: "₦6,500",  img: "/images/Busy%20Mum%20Workout%20%26%20Movement%20Guide.jpeg"          },
   { emoji: "📅", title: "21-Day Belly Reset Tracker",             value: "₦5,000",  img: "/images/21-Day%20Belly%20Reset%20Tracker.jpeg"                       },

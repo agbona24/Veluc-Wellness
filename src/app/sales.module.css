@@ -1731,3 +1731,182 @@
   color: #0F4C5C;
   margin: 0;
 }
+
+/* ── TL;DR Summary Box ── */
+.tldrBox {
+  background: #ffffff;
+  border: 2px solid #0F4C5C;
+  border-radius: 16px;
+  padding: 22px 20px 18px;
+  margin: 0 auto 28px;
+  max-width: 752px;
+}
+
+.tldrLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0F4C5C;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.tldrList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.tldrList li {
+  font-size: 14px;
+  color: #1F2933;
+  line-height: 1.5;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #EBF3F5;
+}
+
+.tldrList li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tldrBtn {
+  display: block;
+  width: 100%;
+  background: #0F4C5C;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  transition: background 0.2s;
+}
+
+.tldrBtn:hover {
+  background: #0A3A47;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.tldrSkip {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #5A7080;
+  text-decoration: none;
+}
+
+.tldrSkip:hover { text-decoration: underline; }
+
+/* ── Timed Offer Drawer ── */
+@keyframes drawerSlideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.offerDrawer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0F4C5C;
+  color: #ffffff;
+  padding: 16px 20px 20px;
+  z-index: 900;
+  animation: drawerSlideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 -4px 28px rgba(0, 0, 0, 0.25);
+}
+
+.offerDrawerClose {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 6px;
+  line-height: 1;
+}
+
+.offerDrawerClose:hover { color: #ffffff; }
+
+.offerDrawerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.offerDrawerLeft { flex: 1; }
+
+.offerDrawerTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 3px;
+  padding-right: 24px;
+}
+
+.offerDrawerSub {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.offerDrawerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.offerDrawerStrike {
+  font-size: 11px;
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.offerDrawerPrice {
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFCC00;
+  line-height: 1;
+}
+
+.offerDrawerBtn {
+  background: #FFCC00;
+  color: #0F4C5C;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 11px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-top: 4px;
+  display: block;
+  transition: background 0.15s;
+}
+
+.offerDrawerBtn:hover {
+  background: #f0bc00;
+  color: #0F4C5C;
+  text-decoration: none;
+}
+
+@media (max-width: 520px) {
+  .offerDrawerInner { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .offerDrawerRight { flex-direction: row; align-items: center; gap: 14px; }
+}

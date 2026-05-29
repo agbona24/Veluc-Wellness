@@ -48,21 +48,6 @@ export default function SalesPage() {
         />
       </div>
 
-      {/* ===== TL;DR SUMMARY BOX ===== */}
-      <div className={s.tldrBox}>
-        <p className={s.tldrLabel}>⏱ Too busy to read? Here&apos;s everything in 60 seconds:</p>
-        <ul className={s.tldrList}>
-          <li>✅ <strong>What it is:</strong> A 21-day food timing guide for Nigerian mothers — no dieting, no gym</li>
-          <li>✅ <strong>Result:</strong> Lose 7–15kg of postpartum belly fat while still eating rice, eba &amp; swallow</li>
-          <li>✅ <strong>First results:</strong> Most women see belly bloat reduce within 96 hours (Day 4)</li>
-          <li>✅ <strong>What you get:</strong> Main guide + 11 bonus guides + interactive wellness platform = ₦147,000 value</li>
-          <li>✅ <strong>Price today:</strong> ₦9,800 one-time — 143 of 200 launch spots taken</li>
-          <li>✅ <strong>Guarantee:</strong> Lose at least 2kg in 21 days or full refund — you keep everything</li>
-        </ul>
-        <a href={CHECKOUT_URL} className={s.tldrBtn}>✅ I Want This — Get Instant Access for ₦9,800</a>
-        <a href="#offer" className={s.tldrSkip}>or read the full story first ↓</a>
-      </div>
-
       {/* ===== SECTION 4: OPENING HOOK ===== */}
       <div className={s.contentBlock}>
         <p>You stand in front of the mirror every morning.</p>
